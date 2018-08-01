@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zipkin-es-deploy
+  labels:
+    app: k8s-demo
+    msvc: zipkin-es
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8s-demo
+      msvc: zipkin-es
+  template:
+    metadata:
+      labels:
+        app: k8s-demo
+        msvc: zipkin-es
+    spec:
+      containers:
+      - name: zipkin-es
+        image: openzipkin/zipkin-elasticsearch
+        ports:
+        - containerPort: 9200

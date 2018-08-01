@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: zipkin-mysql-svc
+  labels:
+    app: k8s-demo
+    msvc: zipkin-mysql
+spec:
+  selector:
+    app: k8s-demo
+    msvc: zipkin-mysql
+  ports:
+  - port: 3306
+    targetPort: 3306
+  type: NodePort

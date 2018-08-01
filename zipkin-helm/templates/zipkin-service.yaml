@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: zipkin-svc
+  labels:
+    app: k8s-demo
+    msvc: zipkin
+spec:
+  selector:
+    app: k8s-demo
+    msvc: zipkin
+  ports:
+  - port: 9411
+    targetPort: 9411
+  type: NodePort

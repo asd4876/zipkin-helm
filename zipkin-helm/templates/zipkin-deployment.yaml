@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zipkin-deploy
+  labels:
+    app: k8s-demo
+    msvc: zipkin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8s-demo
+      msvc: zipkin
+  template:
+    metadata:
+      labels:
+        app: k8s-demo
+        msvc: zipkin
+    spec:
+      containers:
+      - name: zipkin
+        image: openzipkin/zipkin
+        env:
+        - name: STORAGE_TYPE
+          value: {{ .Values.storage }}
+        - name: MYSQL_HOST
+          value: zipkin-mysql-svc
+        - name: ES_HOSTS
+          value: zipkin-es-svc
+        ports:
+        - containerPort: 9411
