@@ -1,0 +1,13 @@
+apiVersion: v1
+entries:
+  zipkin-helm:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-08-01T17:04:22.0461224+08:00
+    description: A Helm chart for Kubernetes
+    digest: fd5fb718ab9cd6e7f3048534b51a1db8050793afb9e41b761e17df2f04c55442
+    name: zipkin-helm
+    urls:
+    - https://asd4876.github.io/zipkin-helm/zipkin-repo/zipkin-helm/zipkin-helm-0.1.0.tgz
+    version: 0.1.0
+generated: 2018-08-01T17:04:22.0451317+08:00
