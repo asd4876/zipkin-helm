@@ -1,0 +1,13 @@
+apiVersion: v1
+entries:
+  zipkin-elasticsearch:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-08-01T17:04:30.7049257+08:00
+    description: A Helm chart for Kubernetes
+    digest: 650d028f74521bf1f51ab823277619e5b267d43fab1f60308ea93635b5f09763
+    name: zipkin-elasticsearch
+    urls:
+    - https://asd4876.github.io/zipkin-helm/zipkin-repo/zipkin-es/zipkin-elasticsearch-0.1.0.tgz
+    version: 0.1.0
+generated: 2018-08-01T17:04:30.7039268+08:00
